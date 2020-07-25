@@ -52,8 +52,11 @@ return [
                         'access_token' => env('TWITTER_ACCESS_TOKEN'),
                         'access_token_secret' => env('TWITTER_ACCESS_TOKEN_SECRET'),
                         'listen_for' => [
-                            '@spatie_be', 'spatie_be', '@POTUS'
+                            // '@spatie_be', 'spatie_be'
+                            // '@spatie_be', 'spatie_be', '@POTUS'
                             // '@spatie_be', '@POTUS', '@CCSJWave'
+                            // 'POTUS', '@POTUS', '@CCSJWave'
+                            'POTUS', '@POTUS'
                         ],
                     ],
                 ],
