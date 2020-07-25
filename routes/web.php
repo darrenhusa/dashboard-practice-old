@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/splash', function () {
     return view('welcome');
 });
 
-Route::view('my-dashboard', 'my-dashboard');
+Route::view('/', 'my-dashboard');

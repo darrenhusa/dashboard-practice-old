@@ -35,22 +35,25 @@ return [
     ],
 
     'tiles' => [
-        'charts' => [
-            'refresh_interval_in_seconds' => 300, // Default: 300 seconds (5 minutes)
-            'scripts' => [
-                'chart' => 'https://unpkg.com/chart.js@2.9.3/dist/Chart.min.js',
-                'chartisan' => 'https://unpkg.com/@chartisan/chartjs@2.1.*/dist/chartisan_chartjs.umd.js',
-                'moment' => 'https://unpkg.com/moment@2.27.0/min/moment-with-locales.min.js',
-            ],
-        ],
+        // 'charts' => [
+        //     'refresh_interval_in_seconds' => 300, // Default: 300 seconds (5 minutes)
+        //     'scripts' => [
+        //         'chart' => 'https://unpkg.com/chart.js@2.9.3/dist/Chart.min.js',
+        //         'chartisan' => 'https://unpkg.com/@chartisan/chartjs@2.1.*/dist/chartisan_chartjs.umd.js',
+        //         'moment' => 'https://unpkg.com/moment@2.27.0/min/moment-with-locales.min.js',
+        //     ],
+        // ],
 
         'twitter' => [
                 'configurations' => [
                     'default' => [
                         'consumer_key' => env('TWITTER_CONSUMER_KEY'),
                         'consumer_secret' => env('TWITTER_CONSUMER_SECRET'),
+                        'access_token' => env('TWITTER_ACCESS_TOKEN'),
+                        'access_token_secret' => env('TWITTER_ACCESS_TOKEN_SECRET'),
                         'listen_for' => [
-                            //
+                            '@spatie_be', 'spatie_be', '@POTUS'
+                            // '@spatie_be', '@POTUS', '@CCSJWave'
                         ],
                     ],
                 ],
@@ -60,8 +63,8 @@ return [
 
           'time_weather' => [
               'open_weather_map_key' => env('OPEN_WEATHER_MAP_KEY'),
-              'open_weather_map_city' => 'Antwerp',
-              'units' => 'metric', // 'metric' or 'imperial' (metric is default)
+              'open_weather_map_city' => 'Chicago, IL',
+              'units' => 'imperial', // 'metric' or 'imperial' (metric is default)
               'buienradar_latitude' => env('BUIENRADAR_LATITUDE'),
               'buienradar_longitude' => env('BUIENRADAR_LONGITUDE'),
           ],
